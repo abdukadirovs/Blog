@@ -3,64 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Sardor Abduqodirov - Learnings & Reflections</title>
-    
-    <meta name="description" content="The personal website and digital garden of Sardor Abduqodirov, an entrepreneur and writer based in Tashkent. Explore insights on business, technology, and personal growth.">
-    <meta name="author" content="Sardor Abduqodirov">
-
-    <link rel="canonical" href="https://sardorwithin.com/" />
-
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-    <meta property="og:title" content="Sardor Abduqodirov - Learnings & Reflections">
-    <meta property="og:description" content="Insights on business, tech, and personal growth. A digital garden to cultivate ideas, share work, and connect.">
-    <meta property="og:image" content="https://i.postimg.cc/7Y0S0Fc5/pro-IMG-6313.jpg">
-    <meta property="og:url" content="https://sardorwithin.com/"> <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sardorwithin">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sardor Abduqodirov - Learnings & Reflections">
-    <meta name="twitter:description" content="Insights on business, tech, and personal growth. A digital garden to cultivate ideas, share work, and connect.">
-    <meta name="twitter:image" content="https://i.postimg.cc/7Y0S0Fc5/pro-IMG-6313.jpg">
-    <meta name="twitter:creator" content="@abdukadirovs">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Sardor Abduqodirov",
-      "alternateName": "Sardorwithin",
-      "url": "https://sardorwithin.com/",
-      "image": "https://i.postimg.cc/7Y0S0Fc5/pro-IMG-6313.jpg",
-      "jobTitle": "Entrepreneur and Writer",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Specialized School named after Al-Khwarizmi"
-      },
-      "knowsAbout": ["Business", "Technology", "Innovation", "Computer Networks", "System Administration"],
-      "nationality": "Uzbekistani",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tashkent",
-        "addressCountry": "UZ"
-      },
-      "sameAs": [
-        "https://x.com/abdukadirovs",
-        "https://www.linkedin.com/in/sardorbek-abduqodirov-0ab1a0316/",
-        "https://www.instagram.com/sardorwithin/",
-        "https://t.me/sardorwithin"
-      ]
-    }
-    </script>
+    <title>From Math Prodigy to "Not a Math Guy": My Journey Back to the Numbers - Sardor Abduqodirov</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -71,36 +21,37 @@
                     colors: {
                         'brand-primary': '#1a1a1a',
                         'brand-secondary': '#4a4a4a',
-                        'brand-accent': '#0ea5e9', 
-                        'brand-light': '#f8fafc',
-                    }
+                        'brand-accent': '#0ea5e9', // Sky Blue
+                        'brand-light': '#f8fafc', 
+                    },
+                    // Add typography styles for prose content
+                    typography: (theme) => ({
+                        DEFAULT: {
+                            css: {
+                                color: theme('colors.brand-secondary'),
+                                a: {
+                                    color: theme('colors.brand-accent'),
+                                    '&:hover': {
+                                        color: theme('colors.brand-primary'),
+                                    },
+                                },
+                                h1: { color: theme('colors.brand-primary') },
+                                h2: { color: theme('colors.brand-primary') },
+                                h3: { color: theme('colors.brand-primary') },
+                                strong: { color: theme('colors.brand-primary') },
+                                code: { color: theme('colors.brand-primary'), backgroundColor: theme('colors.gray.100'), padding: '2px 4px', borderRadius: '4px' },
+                            },
+                        },
+                    }),
                 }
-            }
+            },
         }
     </script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <style>
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #hero-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
         }
     </style>
 </head>
@@ -110,12 +61,14 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="text-2xl font-bold text-brand-primary tracking-tight">Sardorwithin</a>
+                
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="writings.html" class="text-gray-600 hover:text-brand-accent transition-colors duration-300">Writings</a>
-                    <a href="#about" class="text-gray-600 hover:text-brand-accent transition-colors duration-300">About</a>
-                    <a href="#contact" class="bg-brand-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-80 transition-colors duration-300">Contact</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-brand-accent transition-colors duration-300">About</a>
+                    <a href="index.html#contact" class="bg-brand-primary text-white px-4 py-2 rounded-lg hover:bg-opacity-80 transition-colors duration-300">Contact</a>
                 </nav>
-                <button id="mobile-menu-button" class="md:hidden text-brand-primary focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+
+                <button id="mobile-menu-button" class="md:hidden text-brand-primary focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -123,54 +76,51 @@
         <div id="mobile-menu" class="hidden md:hidden">
             <nav class="px-6 pt-2 pb-4 space-y-2">
                 <a href="writings.html" class="block text-gray-600 hover:text-brand-accent transition-colors duration-300 py-2">Writings</a>
-                <a href="#about" class="block text-gray-600 hover:text-brand-accent transition-colors duration-300 py-2">About</a>
-                <a href="#contact" class="block bg-brand-primary text-white text-center mt-2 px-4 py-2 rounded-lg hover:bg-opacity-80 transition-colors duration-300">Contact</a>
+                <a href="index.html#about" class="block text-gray-600 hover:text-brand-accent transition-colors duration-300 py-2">About</a>
+                <a href="index.html#contact" class="block bg-brand-primary text-white text-center mt-2 px-4 py-2 rounded-lg hover:bg-opacity-80 transition-colors duration-300">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main class="container mx-auto px-6">
-        <section class="relative text-center fade-in bg-brand-light overflow-hidden py-12 md:py-20">
-            <canvas id="hero-canvas"></canvas>
-            <div class="hero-content">
-                <h1 class="text-4xl md:text-6xl font-bold text-brand-primary tracking-tighter leading-tight mb-4">Innovate for tomorrow!</h1>
-                <p class="max-w-3xl mx-auto text-lg md:text-xl text-brand-secondary">
-                    The world is full of novelty, and I am sharing what I find impactful! Insights on business, tech, and the art of becoming.
-                </p>
-            </div>
-        </section>
+    <main class="container mx-auto px-6 py-12 md:py-20">
 
-        <section id="posts" class="mt-20 md:mt-28">
-            <h2 class="text-3xl font-bold text-brand-primary tracking-tight mb-8">Latest Writings</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 fade-in" style="animation-delay: 0.1s;">
-                    <p class="text-sm text-gray-500 mb-2">August 31, 2025 &bull; life update</p>
-                    <h3 class="text-xl font-semibold text-brand-primary mb-3">Why I started relearning math after high school?</h3>
-                    <p class="text-brand-secondary mb-4">"The universe is written in the language of mathematics"— Galileo Galilei.</p>
-                    <a href="blog-post-1.html" class="font-semibold text-brand-accent hover:underline">Read More &rarr;</a>
-                </div>
-                <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center mt-8">
-                    <a href="writings.html" class="bg-white text-brand-primary px-6 py-3 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors duration-300">View All Writings</a>
-                </div>
-            </div>
-        </section>
+        <article class="max-w-3xl mx-auto">
+            <header class="mb-12 text-center">
+                 <a href="writings.html" class="text-brand-accent hover:underline mb-4 inline-block">&larr; Back to all writings</a>
+                <h1 class="text-4xl md:text-5xl font-bold text-brand-primary tracking-tighter leading-tight mb-4">From Math Prodigy to "Not a Math Guy": My Journey Back to the Numbers</h1>
+                <p class="text-gray-500">August 31, 2025 &bull; Personal Growth</p>
+            </header>
 
-        <section id="about" class="mt-20 md:mt-28 bg-white rounded-xl p-8 md:p-12 shadow-sm">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div class="md:col-span-1">
-                    <img src="https://i.postimg.cc/7Y0S0Fc5/pro-IMG-6313.jpg" alt="Portrait of Sardor Abduqodirov" class="rounded-full mx-auto w-48 h-48 md:w-full md:h-auto object-cover" loading="lazy" decoding="async">
-                </div>
-                <div class="md:col-span-2 text-center md:text-left">
-                    <h2 class="text-3xl font-bold text-brand-primary tracking-tight mb-4">Who is Sardor Abduqodirov?</h2>
-                    <p class="text-lg text-brand-secondary mb-4">
-                        I'm Sardor Abduqodirov - a student, writer, and innovator - based in Tashkent. I love novelty & innovation, and I'm fascinated by the applications of new tech in business and education. Here, I will be sharing what I know, what I am building, and why. It's a great honor to spread innovative ideas and insights for my peers who wants to build the tomorrow! 
-                    </p>
-                    <p class="text-lg text-brand-secondary">
-                        I graduated from the Specialized IT School named Al-Khwarizmi - the best school in the country for IT. From a young age, I was lucky to take high quality education in IT. During the high school years, I developed an expertise in Computer Networks & System Administration, which led to my deep fascination to the world of tech & innovation. I believe in the power of continuous learning and thoughtful reflection to build the future, and I'm documenting my discoveries here.
-                    </p>
-                </div>
+            <div class="prose lg:prose-lg xl:prose-xl max-w-none mx-auto">
+                <p class="lead">When I first walked into the Specialized IT school named after Muhammad Al-Khwarizmi, I was captivated by the future. The advanced curriculum in Math, Physics, and Computer Science wasn't just a list of subjects; it was a gateway to innovation. I felt electric, thinking of the worlds I could build with that knowledge. Math was the key that unlocked everything else, and it didn't take long for my fascination to ignite into a full-blown obsession.</p>
+                
+                <p>A huge part of that fire was my friend, Asadbek—a true math prodigy who recently won a silver medal at the International Mathematical Olympiad. We were in the same class, and our commutes home became symposiums on high-level mathematics. Asadbek lived and breathed numbers; I'm convinced his dreams are composed of complex proofs. I wasn't quite on his level of obsession, but his passion was contagious. After a year of our daily discussions, I felt a similar drive ignite within me. I was no longer just a student; I was an explorer, thriving on challenging problems and finding immense joy in venturing beyond the national curriculum.</p>
+
+                <p>But in the 9th grade, everything changed. Asadbek moved to another school, and our daily math dialogues vanished. The silence was deafening. Without my study partner pushing me, I found myself stagnating, hovering around standard problems instead of the fascinating, high-level puzzles we used to tackle together. My learning became confined to the school curriculum.</p>
+                
+                <p>I tried to reignite the spark by finding a new teacher, and while he was fantastic, the internal drive wasn't there. I was going through the motions, scraping by on tests without the deep engagement I once had. Soon, my focus drifted entirely. I dove into intensive IELTS courses, then SAT prep. I convinced myself my math foundation was solid enough and poured all my energy into the English sections, underestimating the unique challenges of SAT math. The result was a 780—a great score, but a clear signal that my edge was gone. It was twenty points shy of my goal, and a thousand miles from where I used to be.</p>
+
+                <blockquote>
+                    <p>In just two years, I had gone from "I am a math guy" to "math is not for me." The fire had dwindled to a flicker, and I had started to believe it was gone for good.</p>
+                </blockquote>
+
+                <p>During my senior year, the disconnect became undeniable. I was cramming for school exams, finding basic concepts challenging, and battling a strange feeling that "math just wasn't for me." Looking back, I see how profoundly that shift affected my entire academic life.</p>
+                
+                <p>I've come to realize that learning math isn't about memorizing formulas you'll rarely use. It's about training your brain to engage in active problem-solving. It teaches you to think with clarity, to seek the most optimal solution, and to build creativity in a way few other disciplines can. This is why universities everywhere test for it—math teaches you how to think.</p>
+                
+                <p>In the age of booming AI, this skill is more critical than ever. Math is the bedrock of machine learning, data analysis, cybersecurity, and countless other fields that will define the next few decades. While I haven't mapped out my entire future, I know that a strong mathematical mind is the most versatile tool I can possess. It's essential for being a better thinker, creator, and innovator.</p>
+                
+                <p>So, I'm staging a comeback. Starting today, I am immersing myself in learning math once again. This isn't just about brushing up on old skills; it's about rebuilding my foundation from the ground up. My plan is concrete and I'm holding myself accountable:</p>
+                
+                <ul>
+                    <li><strong>Now:</strong> Finish the entire algebra chapter of the <em>1997-2007 Math Problems</em> textbook.</li>
+                    <li><strong>Afterwards:</strong> Systematically work through Khan Academy, beginning with Algebra 2, then SAT Math, Calculus, and AP Statistics, completing every course challenge along the way.</li>
+                </ul>
+                
+                <p>I've created <a href="https://docs.google.com/spreadsheets/d/1Y1yVL8uHsbEcKjJK-_iNwW7OJCQQOEOVxfzRb8Ok-BM/edit?usp=sharing" target="_blank" rel="noopener noreferrer">a Google Spreadsheet</a> to track my progress, set deadlines, and ensure I stay on course. This is more than just studying; it's a project to reclaim a part of myself I let go of. It's about sharpening my logical thinking and rediscovering the joy of a well-solved problem. This is my journey back to the numbers, and I'm just getting started.</p>
             </div>
-        </section>
+        </article>
+
     </main>
 
     <footer id="contact" class="bg-brand-primary text-white mt-20 md:mt-28">
@@ -180,15 +130,17 @@
                     <h3 class="text-xl font-bold mb-2">Sardor Abduqodirov</h3>
                     <p class="text-gray-400">Learnings & Reflections</p>
                 </div>
+                
                 <div>
                     <h3 class="text-xl font-bold mb-2">Get In Touch</h3>
                     <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://x.com/abdukadirovs" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Visit my profile on X">X / Twitter</a>
-                        <a href="www.linkedin.com/in/sardorwithin" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Visit my profile on LinkedIn">LinkedIn</a>
-                        <a href="https://www.instagram.com/sardorwithin/" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Visit my profile on Instagram">Instagram</a>
-                        <a href="https://t.me/sardorwithin" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Contact me on Telegram">Telegram</a>
+                        <a href="https://x.com/abdukadirovs" class="text-gray-400 hover:text-white transition-colors duration-300">Twitter</a>
+                        <a href="https://www.linkedin.com/in/sardorbek-abduqodirov-0ab1a0316/" class="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</a>
+                        <a href="https://www.instagram.com/sardorwithin/" class="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a>
+                        <a href="https://t.me/bek_tim" class="text-gray-400 hover:text-white transition-colors duration-300">Telegram</a>
                     </div>
                 </div>
+
                 <div>
                     <h3 class="text-xl font-bold mb-2">Sardorwithin</h3>
                     <p class="text-gray-400">Innovate for tomorrow!</p>
@@ -201,111 +153,11 @@
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // --- Mobile Menu Logic (Accessibility Improved) ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
         });
-        // Close menu when a link is clicked
-        const mobileNavLinks = mobileMenu.querySelectorAll('a');
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-            });
-        });
-        // --- Three.js Dynamic Background Animation (waits for the script to be loaded)---
-        if (typeof THREE !== 'undefined') {
-            let scene, camera, renderer, lines, clock;
-            function init() {
-                scene = new THREE.Scene();
-                clock = new THREE.Clock();
-                const container = document.getElementById('hero-canvas').parentElement;
-                camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-                camera.position.z = 5;
-                renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('hero-canvas'), antialias: true, alpha: true });
-                renderer.setSize(container.clientWidth, container.clientHeight);
-                renderer.setClearColor(0x000000, 0);
-                const lineMaterial = new THREE.LineBasicMaterial({
-                    vertexColors: true,
-                    transparent: true,
-                    opacity: 0.25
-                });
-                lines = [];
-                const lineCount = 2;
-                const pointsPerLine = 200;
-                const startColor = new THREE.Color(0x0052D4);
-                const endColor = new THREE.Color(0x0ea5e9);
-                for (let i = 0; i < lineCount; i++) {
-                    const group = new THREE.Group();
-                    const lineSegments = 40;
-                    for (let j = 0; j < lineSegments; j++) {
-                        const geometry = new THREE.BufferGeometry();
-                        const positions = new Float32Array(pointsPerLine * 3);
-                        const colors = new Float32Array(pointsPerLine * 3);
-                        for (let k = 0; k < pointsPerLine; k++) {
-                            const t = k / (pointsPerLine - 1);
-                            const color = new THREE.Color().lerpColors(startColor, endColor, t);
-                            color.toArray(colors, k * 3);
-                        }
-                        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-                        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-                        const line = new THREE.Line(geometry, lineMaterial);
-                        line.offset = j * 0.06;
-                        line.speed = 0.1 + Math.random() * 0.05;
-                        group.add(line);
-                    }
-                    group.position.x = (i - 0.5) * 5;
-                    group.rotation.y = Math.random() * Math.PI;
-                    group.rotation.z = (Math.random() - 0.5) * 0.5;
-                    scene.add(group);
-                    lines.push(group);
-                }
-                window.addEventListener('resize', onWindowResize, false);
-                onWindowResize();
-            }
-            function onWindowResize() {
-                const container = document.getElementById('hero-canvas').parentElement;
-                if (container) {
-                    camera.aspect = container.clientWidth / container.clientHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(container.clientWidth, container.clientHeight);
-                }
-            }
-            function animate() {
-                requestAnimationFrame(animate);
-                const time = clock.getElapsedTime();
-                lines.forEach(group => {
-                    group.rotation.y += 0.0001;
-                    group.rotation.x += 0.0001;
-                    group.rotation.z += 0.00005;
-                    group.children.forEach(line => {
-                        const positions = line.geometry.attributes.position.array;
-                        const offset = line.offset;
-                        const globalTime = time * 0.2;
-                        for (let i = 0; i < positions.length / 3; i++) {
-                            const x_pos = i * 0.1 - 10;
-                            const mainWave = Math.sin(x_pos * 0.25 + globalTime + offset);
-                            const cosWave = Math.cos(x_pos * 0.25 + globalTime + offset);
-                            const textureWave = Math.sin(x_pos * 0.6 + time * 0.5 + offset) * 0.3;
-                            const y = mainWave * 2.0 + textureWave;
-                            const z = cosWave * 2.0;
-                            positions[i * 3] = x_pos;
-                            positions[i * 3 + 1] = y;
-                            positions[i * 3 + 2] = z;
-                        }
-                        line.geometry.attributes.position.needsUpdate = true;
-                    });
-                });
-                renderer.render(scene, camera);
-            }
-            init();
-            animate();
-        }
-    });
     </script>
 </body>
 </html>
